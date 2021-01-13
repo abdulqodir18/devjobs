@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="site-header__container container">
+      
+      <section class="site-header__warapper">
+        <a class="site-header__logo" href="#">
+          <img class="site-header__logo-img" src="img/devjobs.svg" alt="welcome to dev-jobs site" width="115" height="32">
+        </a>
+        
+        <a class="site-header__btn" href="#">add ad</a>
+        
+        <form class="site-header__form form" action="#" method="GET">
+          <input class="input-left visually-hidden" id="input-left" type="radio" name="check" value="give">
+          <input class="input-right visually-hidden" id="input-right" type="radio" name="check" value="get">
+          <label class="give" for="input-left">
+            <img class="give__img" src="img/sun.svg" alt="sun" width="20" height="19">
+          </label>
+          <label class="get" for="input-right">
+            <img class="get__img" src="img/moon.svg" alt="sun" width="12" height="12">
+          </label>
+          <span class="span">
+            <label class="give-label" for="input-left"></label>
+            <label class="get-label" for="input-right"></label>
+          </span>
+        </form>
+      </section>
+      
+      <nav class="site-header__nav ">
+        <form class="site-header__nav-form nav-form" action="#" method="POST">
+          <input class="nav-form__input" type="text" placeholder="technalogy" name="tech">
+          <select class="nav-form__select">
+            <option selected disabled>location</option>
+          </select>
+          <select class="nav-form__select">
+            <option selected disabled>working time</option>
+            <option value="patr">part</option>
+            <option value="full">full</option>
+          </select>
+          <input class="nav-form__input" type="number" placeholder="minimum pay" name="min-pay">
+          <button class="nav-form__btn" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="site-main">
+    <h1 class="visually-hidden">site-main</h1>
+    <section class="site-main__container container">
+      <h2 class="visually-hidden">list</h2>
+      <ul class="site-main__list">
+        <li class="site-main__item card-item">
+          <div class="card-item__time">
+            <p class="card-item__ago">5h ago</p>
+            <p class="card-item__ago">Full Time</p>
+          </div>
+          <h3 class="card-item__sector">Senior Software Engineer</h3>
+          <p class="card-item__text">So Digital Inc.</p>
+          <p class="card-item__where">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
+          <a class="card-item__link" href="#"></a>
+        </li>
+      </ul>
+      <a class="site-main__link" href="#">Load More</a>
+    </section>
+  </main>
+  
+  
+  <div class="form-modal form-modal--open">
+    <div class="form-modal__wrapper">
+      <div class="form-modal__head">
+        <h2 class="form-modal__title">Add New Offer</h2>
+        <button class="form-modal__close" type="button" aria-label="close"></button>
+      </div>
+      <form class="form-modal__form" action="#" method="POST">
+        <input class="form-modal__input" type="text" name="title" placeholder="title" aria-label="title">
+        <input class="form-modal__input" type="text" name="company-name" placeholder="name company" aria-label="name company">
+        <input class="form-modal__input" type="text" name="tech" placeholder="technology name (separated by comma)" aria-label="technology">
+        <input class="form-modal__input" type="text" name="telegram" placeholder="telegram" aria-label="telegram">
+        <input class="form-modal__input" type="number" name="phone-number" placeholder="phone number" aria-label="phone number">
+        <select class="form-modal__select" name="location">
+          <option class="form-modal__option" value="tashkent">Tashkent City</option>
+          <option class="form-modal__option" value="tashkent-region">Tashkent Region</option>
+          <option class="form-modal__option" value="andijan-region">Andijan Region</option>
+          <option class="form-modal__option" value="bukhara-region">Bukhara Region</option>
+          <option class="form-modal__option" value="fergana-region">Fergana Region</option>
+          <option class="form-modal__option" value="jizzakh-region">Jizzakh Region</option>
+          <option class="form-modal__option" value="karakalpakstan-кepublic">Karakalpakstan Republic</option>
+          <option class="form-modal__option" value="kashkadarya-region">Kashkadarya Region</option>
+          <option class="form-modal__option" value="khorezm-region">Khorezm Region</option>
+          <option class="form-modal__option" value="namangan-region">Namangan Region</option>
+          <option class="form-modal__option" value="navoiy-region">Navoiy Region</option>
+          <option class="form-modal__option" value="samarkand-region">Samarkand Region</option>
+          <option class="form-modal__option" value="surkhandarya-region">Surkhandarya Region</option>
+          <option class="form-modal__option" value="syrdarya-region">Syrdarya Region</option>
+        </select>
+        <input class="form-modal__input" name="responsible" type="text" placeholder="responsible" aria-label="responsible">
+        <select class="form-modal__select" name="time">
+          <option class="form-modal__option" value="full-time">9:00-18:00</option>
+          <option class="form-modal__option" value="part-time">9:00-13:00</option>
+          <option class="form-modal__option" value="part-time">13:00-18:00</option>
+        </select>
+        <input class="form-modal__input" type="number" name="min-pay" placeholder="min-pay" aria-label="min-pay">
+  
+        <button class="form-modal__btn" type="submit">Add Offer</button>
+      </form>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

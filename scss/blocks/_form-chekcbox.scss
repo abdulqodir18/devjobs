@@ -1,0 +1,76 @@
+.form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-left:focus ~ .give {
+  border-radius: 8px;
+}
+.input-right:focus ~ .get {
+  border-radius: 8px;
+}
+.give{
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  transition: color 0.2s ease;
+  border: 3px solid transparent;
+}
+.get{
+  order: 1;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  transition: color 0.2s ease;
+  border: 3px solid transparent;
+}
+.span {
+  display: flex;
+  align-items: center;
+  width: 58px;
+  height: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+  background-color: var(--white);
+  border-radius: 12px;
+  position: relative;
+}
+.span::before{
+  content: "";
+  display: block;
+  margin: 3px 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--violet);
+}
+.give-label{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.get-label{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.input-right:checked ~ .span::before{
+  margin-left: auto;
+}
+.input-right:checked ~ .span .get-label{
+  z-index: -1;
+}
+.input-right:checked ~ .get{
+  // color: #00D36D;
+}
+.input-left:checked ~ .span .give-label{
+  z-index: -1;
+}
+.input-left:checked ~ .give{
+  // color: #00D36D;
+}

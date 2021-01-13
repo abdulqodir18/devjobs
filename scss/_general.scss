@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --violet: rgb(89, 100, 224);
+  --light-violet: rgb(147, 155, 244);
+  --white: rgb(255, 255, 255);
+  --light-gray: rgb(244, 246, 248);
+  --gray: rgb(157, 174, 194);
+  --dark-gray: rgb(110, 128, 152);
+  --very-dark-blue: rgb(25, 32, 45);
+  --mindnight: rgb(18, 23, 33);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--light-gray);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
