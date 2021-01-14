@@ -58,18 +58,7 @@
     <h1 class="visually-hidden">site-main</h1>
     <section class="site-main__container container">
       <h2 class="visually-hidden">list</h2>
-      <ul class="site-main__list">
-        <li class="site-main__item card-item">
-          <div class="card-item__time">
-            <p class="card-item__ago">5h ago</p>
-            <p class="card-item__ago">Full Time</p>
-          </div>
-          <h3 class="card-item__sector">Senior Software Engineer</h3>
-          <p class="card-item__text">So Digital Inc.</p>
-          <p class="card-item__where">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
-          <a class="card-item__link" href="#"></a>
-        </li>
-      </ul>
+      <ul class="site-main__list"></ul>
       <a class="site-main__link" href="#">Load More</a>
     </section>
   </main>
@@ -110,11 +99,26 @@
           <option class="form-modal__option" value="part-time">13:00-18:00</option>
         </select>
         <input class="form-modal__input" type="number" name="min-pay" placeholder="min-pay" aria-label="min-pay">
-  
+        
         <button class="form-modal__btn" type="submit">Add Offer</button>
       </form>
     </div>
   </div>
+  
+  <template class="card-templet">
+    <li class="site-main__item card-item">
+      <div class="card-item__time">
+        <p class="card-item__ago">5h ago</p>
+        <p class="card-item__ago">Full Time</p>
+      </div>
+      <h3 class="card-item__sector">Senior Software Engineer</h3>
+      <p class="card-item__text">So Digital Inc.</p>
+      <p class="card-item__where">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
+      <a class="card-item__link" href="#"></a>
+    </li>
+  </template>
   <script src="main.js"></script>
 </body>
 </html>
+
+
