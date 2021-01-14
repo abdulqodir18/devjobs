@@ -672,12 +672,8 @@ img {
   margin-bottom: 40px;
 }
 
-.site-main__item:last-child {
-  margin-bottom: 0;
-}
-
 .card-item {
-  max-width: 350px;
+  min-width: 350px;
   border-radius: 6px;
   background-color: var(--white);
   display: -webkit-box;
@@ -799,7 +795,7 @@ img {
   max-width: 700px;
   width: 100%;
   padding: 30px 25px;
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: var(--light-gray);
   border-bottom-left-radius: 70px;
 }
@@ -864,6 +860,14 @@ img {
 
 .form-modal__option {
   padding: 5px;
+}
+
+.form-modal__textarea {
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 15px;
 }
 
 .form-modal__btn {
