@@ -19,6 +19,17 @@ html {
   --mindnight: rgb(18, 23, 33);
 }
 
+.mindnight {
+  --violet: rgb(18, 23, 33);
+  --light-violet: rgb(25, 32, 45);
+  --white: rgb(110, 128, 152);
+  --light-gray: rgb(157, 174, 194);
+  --gray:  rgb(244, 246, 248);
+  --dark-gray: rgb(255, 255, 255);
+  --very-dark-blue: rgb(147, 155, 244);
+  --mindnight: rgb(89, 100, 224);
+}
+
 body {
   display: flex;
   flex-direction: column;

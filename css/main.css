@@ -364,6 +364,17 @@ html {
   --mindnight: rgb(18, 23, 33);
 }
 
+.mindnight {
+  --violet: rgb(18, 23, 33);
+  --light-violet: rgb(25, 32, 45);
+  --white: rgb(110, 128, 152);
+  --light-gray: rgb(157, 174, 194);
+  --gray:  rgb(244, 246, 248);
+  --dark-gray: rgb(255, 255, 255);
+  --very-dark-blue: rgb(147, 155, 244);
+  --mindnight: rgb(89, 100, 224);
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,6 +419,10 @@ img {
 .site-header {
   padding-top: 45px;
   padding-bottom: 85px;
+  background-image: url("../../img/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: var(--violet);
   border-bottom-left-radius: 100px;
   position: relative;
@@ -742,7 +757,7 @@ img {
 }
 
 .card-item__link {
-  z-index: 50;
+  z-index: 10;
   position: absolute;
   left: 0;
   top: 0;

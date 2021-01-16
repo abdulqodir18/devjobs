@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
-<body>
+<body class="">
   
   <header class="site-header">
     <div class="site-header__container container">
@@ -20,9 +20,9 @@
         
         <a class="site-header__btn js-modal-open-toggle" href="#">add ofer</a>
         
-        <form class="site-header__form form" action="#" method="GET">
-          <input class="input-left visually-hidden" id="input-left" type="radio" name="check" value="give">
-          <input class="input-right visually-hidden" id="input-right" type="radio" name="check" value="get">
+        <form class="site-header__form form js-day-nigt-form" action="#" method="GET">
+          <input class="input-left js-day visually-hidden" id="input-left" type="radio" name="check" value="give">
+          <input class="input-right js-night visually-hidden" id="input-right" type="radio" name="check" value="get">
           <label class="give" for="input-left">
             <img class="give__img" src="img/sun.svg" alt="sun" width="20" height="19">
           </label>
@@ -40,7 +40,7 @@
         <form class="site-header__nav-form nav-form js-search-form" action="#" method="POST">
           <input class="nav-form__input js-search-tech" type="text" placeholder="technalogy" name="tech">
           <select class="nav-form__select js-search-location">
-            <option selected disabled>location</option>
+            <option selected disabled>address</option>
             <option class="form-modal__option" value="tashkent">Tashkent City</option>
             <option class="form-modal__option" value="tashkent-region">Tashkent Region</option>
             <option class="form-modal__option" value="andijan-region">Andijan Region</option>
@@ -58,10 +58,11 @@
           </select>
           <select class="nav-form__select js-search-time">
             <option selected disabled>working time</option>
-            <option value="patr">part</option>
             <option value="full">full</option>
+            <option value="part-first">part first</option>
+            <option value="part-second">part second</option>
           </select>
-          <input class="nav-form__input js-search-pay" type="number" placeholder="minimum pay" name="min-pay">
+          <input class="nav-form__input js-search-pay" type="number" disabled placeholder="minimum pay" name="min-pay">
           <button class="nav-form__btn" type="submit">Search</button>
         </form>
       </nav>
@@ -91,6 +92,8 @@
         <input class="form-modal__input js-add-offer-telegram" type="text" name="telegram" placeholder="telegram" aria-label="telegram">
         <input class="form-modal__input js-add-offer-number" type="number" name="phone-number" placeholder="phone number" aria-label="phone number">
         <select class="form-modal__select js-add-offer-location" name="location">
+          <option class="form-modal__option" selected disabled>location</option>
+          <option class="form-modal__option" value="All">All</option>
           <option class="form-modal__option" value="tashkent">Tashkent City</option>
           <option class="form-modal__option" value="tashkent-region">Tashkent Region</option>
           <option class="form-modal__option" value="andijan-region">Andijan Region</option>
@@ -108,9 +111,10 @@
         </select>
         <input class="form-modal__input js-add-offer-respon" name="responsible" type="text" placeholder="responsible" aria-label="responsible">
         <select class="form-modal__select js-add-offer-time" name="time">
-          <option class="form-modal__option" value="9:00-18:00">9:00-18:00</option>
-          <option class="form-modal__option" value="9:00-13:00">9:00-13:00</option>
-          <option class="form-modal__option" value="13:00-18:00">13:00-18:00</option>
+          <option class="form-modal__option" disabled selected>time</option>
+          <option class="form-modal__option" value="full">9:00-18:00</option>
+          <option class="form-modal__option" value="part-first">9:00-13:00</option>
+          <option class="form-modal__option" value="part-second">13:00-18:00</option>
         </select>
         <input class="form-modal__input js-add-offer-pay" type="number" name="min-pay" placeholder="min-pay" aria-label="min-pay">
         <textarea class="form-modal__textarea js-add-offer-more" placeholder="more info" name="more"></textarea>
@@ -136,7 +140,7 @@
           </div>
           <div class="js-skills-output text-info"></div>
           <div class="d-flex">
-            <a class="js-telegram-output mr-5"></a>
+            <a class="js-telegram-output mr-5">asass</a>
             <a class="js-phone-output"></a>
           </div>
           <div class="d-flex">
@@ -162,7 +166,7 @@
       <h3 class="card-item__sector">Senior Software Engineer</h3>
       <p class="card-item__text">So Digital Inc.</p>
       <p class="card-item__where">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
-      <a class="card-item__link" href="#"></a>
+      <a class="card-item__link" href="#" data-toggle="modal" data-target="#elonItem"></a>
     </li>
   </template>
   
