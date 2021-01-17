@@ -18,7 +18,10 @@
           <img class="site-header__logo-img" src="img/devjobs.svg" alt="welcome to dev-jobs site" width="115" height="32">
         </a>
         
-        <a class="site-header__btn js-modal-open-toggle" href="#">add ofer</a>
+        <div class="site-header__btns-wrapper">
+          <a class="site-header__btn js-modal-open-toggle" href="#">add offer</a>
+          <a class="site-header__btn js-modal-open-form" href="#">search offer</a>
+        </div>
         
         <form class="site-header__form form js-day-nigt-form" action="#" method="GET">
           <input class="input-left js-day visually-hidden" id="input-left" type="radio" name="check" value="give">
@@ -36,8 +39,9 @@
         </form>
       </section>
       
-      <nav class="site-header__nav ">
+      <nav class="site-header__nav js-site-nav">
         <form class="site-header__nav-form nav-form js-search-form" action="#" method="POST">
+          <button class="js-search-btn"> close</button>
           <input class="nav-form__input js-search-tech" type="text" placeholder="technalogy" name="tech">
           <select class="nav-form__select js-search-location">
             <option selected disabled>address</option>
@@ -63,7 +67,7 @@
             <option value="part-second">part second</option>
           </select>
           <input class="nav-form__input js-search-pay" type="number" disabled placeholder="minimum pay" name="min-pay">
-          <button class="nav-form__btn" type="submit">Search</button>
+          <button class="nav-form__btn " type="submit">Search</button>
         </form>
       </nav>
     </div>

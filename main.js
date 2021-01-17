@@ -11,11 +11,13 @@ var elNight = $_(`.js-night`);
 // console.log(elBright.value);
 // console.log(elNigt.value);
 // search form
+var elSearchNav = document.querySelector(`.js-site-nav`);
 var elSearchForm = document.querySelector(`.js-search-form`);
 var elInputTech = document.querySelector(`.js-search-tech`);
 var elInputLocation = document.querySelector(`.js-search-location`);
 var elInputTime = document.querySelector(`.js-search-time`);
 var elInputPay = document.querySelector(`.js-search-pay`);
+var elSearchBtn = document.querySelector(`.js-search-btn`);
 var elListCard = document.querySelector(`.js-card-list`);
 
 // add offer form
@@ -35,6 +37,7 @@ var elTempletCard = document.querySelector(`.js-card-templet`).content;
 // modal
 var elModal = document.querySelector(`.js-form-modal`);
 var elBtnModal = document.querySelector(`.js-modal-open-toggle`);
+var elBtnSearchModal = document.querySelector(`.js-modal-open-form`);
 var elBtnCloseModal = document.querySelector(`.js-modal-close-btn`);
 
 // card modal
@@ -104,6 +107,18 @@ elBtnModal.addEventListener(`click`, function(evt){
 });
 elBtnCloseModal.addEventListener(`click`, function(evt){
   elModal.classList.remove(`form-modal--open`)
+});
+
+// search modal ochilishi ucun
+elBtnSearchModal.addEventListener(`click`, function(evt){
+  evt.preventDefault()
+  elSearchForm.classList.add(`nav-form-open`);
+  console.log(`ishi`);
+});
+elSearchBtn.addEventListener(`click`, function(evt){
+  evt.preventDefault()
+  elSearchForm.classList.remove(`nav-form-open`);
+  console.log(`ishladi`);
 });
 
 displayCard(userOffers);
